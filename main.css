@@ -1,0 +1,12 @@
+html {
+    font-family: arial, sans-serif;
+    font-size: 10pt;
+}
+#opt_lenght {
+    width: 4em;
+}
+#result {
+    font-family: monospace;
+    /*white-space: nowrap;*/
+    word-break: break-all;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Password generator</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/bootstrap-grid.min.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/main.css" />
+    
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+            <fieldset>
+                <legend>Options</legend>
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <label><input type="checkbox" id="opt_upper" checked="checked"> Upper-case (A - Z)</label><br>
+                        <label><input type="checkbox" id="opt_lower" checked="checked"> Lower-case (a - z)</label><br>
+                        <label><input type="checkbox" id="opt_digits" checked="checked"> Digits (0 - 9)</label><br>
+                        <label><input type="checkbox" id="opt_minus" checked="checked"> Minus (-)</label><br>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <label><input type="checkbox" id="opt_underline" checked="checked"> Underline (_)</label><br>
+                        <label><input type="checkbox" id="opt_space"> Space ( )</label><br>
+                        <label><input type="checkbox" id="opt_specials" checked="checked"> Special (!, @, #, $, %, &, *, ?, ~)</label><br>
+                        <label><input type="checkbox" id="opt_brackets"> Brackets ([, ], {, }, (, ), <, >)</label><br>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <label>Also include characters:<br><input type="text" id="opt_include"></label><br>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <label>Exlude characters:<br><input type="text" id="opt_exclude"></label>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <label><input type="checkbox" id="opt_duplicate" checked="checked"> Avoid duplicate characters</label>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <label>Lenght: <input type="number" id="opt_lenght" value="12" maxlength="4" min="1" max="9999"></label>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="row mt-4">
+                <div class="col">
+                    <button onclick="generate();return false;">Generate</button>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div id="result" class="col"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/main.js"></script>
+</body>
+</html>
